@@ -14,6 +14,11 @@
 		7577DAEA270FE94C0007B509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7577DAE8270FE94C0007B509 /* LaunchScreen.storyboard */; };
 		7577DAF2270FEB430007B509 /* StocksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7577DAF1270FEB430007B509 /* StocksTableViewController.swift */; };
 		7577DAF4270FEEEE0007B509 /* CompanyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7577DAF3270FEEEE0007B509 /* CompanyInfo.swift */; };
+		75F0561527191B6100576206 /* StockTableViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0561427191B6100576206 /* StockTableViewCode.swift */; };
+		75F0561727191C0B00576206 /* StockNetworkingCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0561627191C0B00576206 /* StockNetworkingCode.swift */; };
+		75F0561A27191D4500576206 /* StockTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0561827191D4500576206 /* StockTableViewCell.swift */; };
+		75F0561B27191D4500576206 /* StockTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75F0561927191D4500576206 /* StockTableViewCell.xib */; };
+		75F0561D2719258C00576206 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F0561C2719258C00576206 /* DetailsViewController.swift */; };
 		9BA01F934DF8BED2EB0E5236 /* Pods_NYSEStock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AE4AC40580232DFCEDFE0C6 /* Pods_NYSEStock.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +32,11 @@
 		7577DAEB270FE94C0007B509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7577DAF1270FEB430007B509 /* StocksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksTableViewController.swift; sourceTree = "<group>"; };
 		7577DAF3270FEEEE0007B509 /* CompanyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfo.swift; sourceTree = "<group>"; };
+		75F0561427191B6100576206 /* StockTableViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCode.swift; sourceTree = "<group>"; };
+		75F0561627191C0B00576206 /* StockNetworkingCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNetworkingCode.swift; sourceTree = "<group>"; };
+		75F0561827191D4500576206 /* StockTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockTableViewCell.swift; sourceTree = "<group>"; };
+		75F0561927191D4500576206 /* StockTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockTableViewCell.xib; sourceTree = "<group>"; };
+		75F0561C2719258C00576206 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		978BAD1B4DCC15DABAECF8E7 /* Pods-NYSEStock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStock.debug.xcconfig"; path = "Target Support Files/Pods-NYSEStock/Pods-NYSEStock.debug.xcconfig"; sourceTree = "<group>"; };
 		9AE4AC40580232DFCEDFE0C6 /* Pods_NYSEStock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NYSEStock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA044F89DC33254FF90AB067 /* Pods-NYSEStock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NYSEStock.release.xcconfig"; path = "Target Support Files/Pods-NYSEStock/Pods-NYSEStock.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,16 +92,45 @@
 		7577DADC270FE9480007B509 /* NYSEStock */ = {
 			isa = PBXGroup;
 			children = (
+				75F0561327191B0D00576206 /* View */,
+				75F0561227191AF800576206 /* Controller */,
+				75F0561127191AD100576206 /* Model */,
 				7577DADD270FE9480007B509 /* AppDelegate.swift */,
 				7577DADF270FE9480007B509 /* SceneDelegate.swift */,
-				7577DAE3270FE9480007B509 /* Main.storyboard */,
-				7577DAE6270FE94C0007B509 /* Assets.xcassets */,
-				7577DAE8270FE94C0007B509 /* LaunchScreen.storyboard */,
 				7577DAEB270FE94C0007B509 /* Info.plist */,
-				7577DAF1270FEB430007B509 /* StocksTableViewController.swift */,
-				7577DAF3270FEEEE0007B509 /* CompanyInfo.swift */,
 			);
 			path = NYSEStock;
+			sourceTree = "<group>";
+		};
+		75F0561127191AD100576206 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7577DAF3270FEEEE0007B509 /* CompanyInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		75F0561227191AF800576206 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7577DAF1270FEB430007B509 /* StocksTableViewController.swift */,
+				75F0561427191B6100576206 /* StockTableViewCode.swift */,
+				75F0561627191C0B00576206 /* StockNetworkingCode.swift */,
+				75F0561827191D4500576206 /* StockTableViewCell.swift */,
+				75F0561927191D4500576206 /* StockTableViewCell.xib */,
+				75F0561C2719258C00576206 /* DetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		75F0561327191B0D00576206 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7577DAE6270FE94C0007B509 /* Assets.xcassets */,
+				7577DAE8270FE94C0007B509 /* LaunchScreen.storyboard */,
+				7577DAE3270FE9480007B509 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +195,7 @@
 			files = (
 				7577DAEA270FE94C0007B509 /* LaunchScreen.storyboard in Resources */,
 				7577DAE7270FE94C0007B509 /* Assets.xcassets in Resources */,
+				75F0561B27191D4500576206 /* StockTableViewCell.xib in Resources */,
 				7577DAE5270FE9480007B509 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,9 +249,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75F0561A27191D4500576206 /* StockTableViewCell.swift in Sources */,
 				7577DADE270FE9480007B509 /* AppDelegate.swift in Sources */,
 				7577DAE0270FE9480007B509 /* SceneDelegate.swift in Sources */,
+				75F0561D2719258C00576206 /* DetailsViewController.swift in Sources */,
 				7577DAF4270FEEEE0007B509 /* CompanyInfo.swift in Sources */,
+				75F0561727191C0B00576206 /* StockNetworkingCode.swift in Sources */,
+				75F0561527191B6100576206 /* StockTableViewCode.swift in Sources */,
 				7577DAF2270FEB430007B509 /* StocksTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
